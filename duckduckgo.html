@@ -4,9 +4,21 @@
     <title>DuckDuckGo Bar</title>
 </head>
 <body>
-<form action="https://duckduckgo.com/" method="GET">
+<form method="GET" name="search_box">
 <a href="https://www.duckduckgo.com/"><img src="icon.png" height=16 width=16></a>&nbsp;<input type="text" name="q" style="outline:none;width:350px;color:#222;background:#FFF;font-family:Century Gothic,Arial;font-size:16px;border:0 none;margin:0;padding:0;padding-left:5px;padding-top:0px;padding-bottom:0px;">
-<input type="submit" value="Duck Duck Go!">
+<input type="submit" value="Duck Duck Go!" onclick="setAction()">
 </form>
+<script type="text/javascript">
+    function setAction() {
+        var secure = safari.extension.settings.getItem("ddg_secure");
+        if (secure) {
+            document.forms[0].action = "https://duckduckgo.com";
+        }
+        else {
+           document.forms[0].action = "http://duckduckgo.com";
+        }
+        return TRUE;
+    }
+</script>
 </body>
 </html>
