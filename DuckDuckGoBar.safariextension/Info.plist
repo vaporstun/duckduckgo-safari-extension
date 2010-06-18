@@ -5,15 +5,15 @@
 	<key>Author</key>
 	<string>Victor Quinn</string>
 	<key>CFBundleDisplayName</key>
-	<string>DuckDuckGo</string>
+	<string>DuckDuckGoBar</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.vaporstun.duckduckgo</string>
+	<string>com.vaporstun.duckduckgobar</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.3</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>7</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Bars</key>
@@ -22,7 +22,7 @@
 				<key>Filename</key>
 				<string>duckduckgo.html</string>
 				<key>Label</key>
-				<string>DuckDuckGo</string>
+				<string>DuckDuckGoBar</string>
 			</dict>
 		</array>
 		<key>Context Menu Items</key>
