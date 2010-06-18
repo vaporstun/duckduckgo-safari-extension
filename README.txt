@@ -13,7 +13,7 @@ I love DuckDuckGo and it always annoyed me that the plugin Glims had to be insta
 
 Download
 --------
-The extension can be downloaded at:  http://github.com/downloads/vaporstun/duckduckgo-safari-extension/DuckDuckGo.safariextz
+The extension can be downloaded at:  http://github.com/downloads/vaporstun/duckduckgo-safari-extension/DuckDuckGoBar.safariextz
 
 
 Enabling Extensions
