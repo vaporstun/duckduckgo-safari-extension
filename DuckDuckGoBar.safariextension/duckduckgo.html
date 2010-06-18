@@ -6,10 +6,15 @@
         body {
             padding: 2px;
         }
+	#logo {
+	    float: left;
+	}
+	#search {
+	    float: left;
+	}
 	#ddgIcon {
-	    height: 20px;
-	    width: 20px;
 	    display: inline;
+	    margin: 2px 0px;
 	}
         #searchBox {
             padding: 0;
@@ -23,16 +28,19 @@
             font-family:Century Gothic,Arial;
             font-size:18px;
             border:0 none;
-            margin:0 0 0 2px;
             padding:0 5px;
-            -webkit-border-radius: 15px;
+            -webkit-border-radius: 0px 15px 15px 0px;
         }
     </style>
 </head>
 <body>
-<a href="https://www.duckduckgo.com/"><img src="icon.png" id="ddgIcon" /></a>
-<input id="searchField" type="text" name="q" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" />
-<input type="submit" value="Duck Duck Go!" onclick="ddgSubmitSearch()" id="btnSearch" />
+<div id="logo">
+  <a href="https://www.duckduckgo.com/"><img src="leftbar.png" id="ddgIcon" /></a>
+</div>
+<div id="search">
+  <input id="searchField" type="text" name="q" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" />
+  <input type="submit" value="Duck Duck Go!" onclick="ddgSubmitSearch()" id="btnSearch" />
+</div>
 <script type="text/javascript">
 function ddgSubmitSearch() {
   var searchTerms = document.getElementById('searchField').value;
