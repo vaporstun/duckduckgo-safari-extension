@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.2</string>
+	<string>1.2.1</string>
 	<key>CFBundleVersion</key>
-	<string>1.2</string>
+	<string>1.2.1</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Bars</key>
@@ -64,6 +64,8 @@
 		</dict>
 	</dict>
 	<key>Update Manifest URL</key>
-	<string>http://vaporstun.com/files/ddgExtensionUpdates.plist</string>
+	<string>http://github.com/vaporstun/duckduckgo-safari-extension/raw/master/latest.plist</string>
+	<key>Website</key>
+	<string>http://github.com/vaporstun/duckduckgo-safari-extension/</string>
 </dict>
 </plist>
