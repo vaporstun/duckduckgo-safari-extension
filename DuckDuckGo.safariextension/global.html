@@ -6,7 +6,7 @@
     <script type="text/javascript">
     function ddgRightClickCommand(event) {
         var searchTerms = event.userInfo;
-        var secure = safari.extension.settings.getItem("ddg_secure");
+        var secure = safari.extension.settings.getItem("ddgSecure");
         if (secure) {
           searchURL = "https://duckduckgo.com/?q=" + searchTerms;
         }

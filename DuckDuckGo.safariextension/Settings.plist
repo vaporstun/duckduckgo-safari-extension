@@ -6,7 +6,7 @@
 		<key>DefaultValue</key>
 		<true/>
 		<key>Key</key>
-		<string>ddg_secure</string>
+		<string>ddgSecure</string>
 		<key>Secure</key>
 		<false/>
 		<key>Title</key>
