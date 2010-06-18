@@ -18,9 +18,9 @@
             font-family:Century Gothic,Arial;
             font-size:18px;
             border:0 none;
-            margin:0;
+            margin:0 0 0 2px;
             padding:0 5px;
-	    -webkit-border-radius: 15px;
+            -webkit-border-radius: 15px;
         }
     </style>
 </head>
@@ -30,16 +30,16 @@
 <input type="submit" value="Duck Duck Go!" onclick="setAction()">
 </form>
 <script type="text/javascript">
-    function setAction() {
-        var secure = safari.extension.settings.getItem("ddg_secure");
-        if (secure) {
-            document.forms[0].action = "https://duckduckgo.com";
-        }
-        else {
-           document.forms[0].action = "http://duckduckgo.com";
-        }
-        return TRUE;
+function setAction() {
+    var secure = safari.extension.settings.getItem("ddg_secure");
+    if (secure) {
+        document.forms[0].action = "https://duckduckgo.com";
     }
+    else {
+        document.forms[0].action = "http://duckduckgo.com";
+    }
+    return TRUE;
+}
 </script>
 </body>
 </html>

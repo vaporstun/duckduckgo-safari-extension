@@ -14,5 +14,53 @@
 		<key>Type</key>
 		<string>CheckBox</string>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>newTab</string>
+		<key>Key</key>
+		<string>ddgOpenStyle</string>
+		<key>Title</key>
+		<string>Open DuckDuckGo search</string>
+		<key>Titles</key>
+		<array>
+			<string>in a New Tab</string>
+			<string>in a New Background Tab</string>
+			<string>in the Current Tab</string>
+			<string>in a New Window</string>
+		</array>
+		<key>Type</key>
+		<string>RadioButtons</string>
+		<key>Values</key>
+		<array>
+			<string>newTab</string>
+			<string>bgTab</string>
+			<string>curTab</string>
+			<string>newWindow</string>
+		</array>
+	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<string>newTab</string>
+		<key>Key</key>
+		<string>ddgRightClickStyle</string>
+		<key>Title</key>
+		<string>Right click search opens</string>
+		<key>Titles</key>
+		<array>
+			<string>in a New Tab</string>
+			<string>in a New Background Tab</string>
+			<string>in the Current Tab</string>
+			<string>in a New Window</string>
+		</array>
+		<key>Type</key>
+		<string>RadioButtons</string>
+		<key>Values</key>
+		<array>
+			<string>newTab</string>
+			<string>bgTab</string>
+			<string>curTab</string>
+			<string>newWindow</string>
+		</array>
+	</dict>
 </array>
 </plist>
