@@ -6,6 +6,11 @@
         body {
             padding: 2px;
         }
+	#ddgIcon {
+	    height: 20px;
+	    width: 20px;
+	    display: inline;
+	}
         #searchBox {
             padding: 0;
             margin: 0;
@@ -25,20 +30,36 @@
     </style>
 </head>
 <body>
-<form method="GET" id="searchBox">
-<a href="https://www.duckduckgo.com/"><img src="icon.png" width=20px height=20px></a><input id="searchField" type="text" name="q" style="">
-<input type="submit" value="Duck Duck Go!" onclick="setAction()">
-</form>
+<a href="https://www.duckduckgo.com/"><img src="icon.png" id="ddgIcon" /></a>
+<input id="searchField" type="text" name="q" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" />
+<input type="submit" value="Duck Duck Go!" onclick="ddgSubmitSearch()" id="btnSearch" />
 <script type="text/javascript">
-function setAction() {
-    var secure = safari.extension.settings.getItem("ddgSecure");
-    if (secure) {
-        document.forms[0].action = "https://duckduckgo.com";
-    }
-    else {
-        document.forms[0].action = "http://duckduckgo.com";
-    }
-    return TRUE;
+function ddgSubmitSearch() {
+  var searchTerms = document.getElementById('searchField').value;
+  var secure = safari.extension.settings.getItem("ddgSecure");
+  if (secure) {
+    searchURL = "https://duckduckgo.com/?q=" + searchTerms;
+  }
+  else {
+    searchURL = "http://duckduckgo.com/?q=" + searchTerms;
+  }
+        
+  ddgOpenStyle = safari.extension.settings.getItem("ddgOpenStyle");
+  switch(ddgOpenStyle) {
+    case 'newTab':
+      var tab = safari.application.activeBrowserWindow.openTab("foreground");
+      tab.url = searchURL;
+      break;
+    case 'bgTab':
+      var tab = safari.application.activeBrowserWindow.openTab("background");
+      tab.url = searchURL;
+      break;
+    case 'newWindow':
+      safari.application.openBrowserWindow();
+    case 'curTab':
+      safari.application.activeBrowserWindow.activeTab.url = searchURL;
+       break;
+  }
 }
 </script>
 </body>
