@@ -12,6 +12,10 @@
 	#search {
 	    float: left;
 	}
+	#submitButton {
+	    float: left;
+	    margin: 2px;
+	}
 	#ddgIcon {
 	    display: inline;
 	    margin: 2px 0px;
@@ -39,6 +43,8 @@
 </div>
 <div id="search">
   <input id="searchField" type="text" name="q" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" />
+</div>
+<div id="submitButton">
   <input type="submit" value="Duck Duck Go!" onclick="ddgSubmitSearch()" id="btnSearch" />
 </div>
 <script type="text/javascript">
