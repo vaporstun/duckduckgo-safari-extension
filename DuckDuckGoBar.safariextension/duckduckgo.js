@@ -8,10 +8,18 @@ function ddgHandler(ddgEvent) {
 }
 
 window.addEventListener('keydown', checkKeyDown, false);
+window.addEventListener('keyup', checkKeyUp, false);
+
+var isCtrl = false;
 
 function checkKeyDown(e) {
     if (e.which == 17) isCtrl=true;
     if (e.which == 68 && isCtrl == true) {
 	safari.self.tab.dispatchMessage('ddgFocus');
+	isCtrl = false;
     }
+}
+
+function checkKeyUp(e) {
+    if (e.which == 17) isCtrl = false;
 }
