@@ -75,6 +75,17 @@ function ddgSubmitSearch() {
        break;
   }
 }
+
+safari.application.addEventListener("message", captureMessageEvent, false);
+function captureMessageEvent(event) {
+  if (event.name == 'ddgFocus') {
+    ddgShortcut = safari.extension.settings.getItem("ddgShortcut");
+    if (ddgShortcut == true) {
+      document.getElementById('searchField').focus();
+      document.getElementById('searchField').select();
+    }
+  }
+}
 </script>
 </body>
 </html>

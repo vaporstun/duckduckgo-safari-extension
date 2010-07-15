@@ -11,9 +11,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleVersion</key>
-	<string>15</string>
+	<string>16</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Bars</key>
@@ -50,7 +50,7 @@
 		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Adds DuckDuckGo Extension Bar and Right Click Context Menu Item</string>
+	<string>Adds DuckDuckGo Extension Bar and Right Click Context Menu Item. Ctrl-D to jump to search.</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>

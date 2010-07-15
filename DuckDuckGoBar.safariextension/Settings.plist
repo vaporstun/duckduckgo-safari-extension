@@ -62,5 +62,15 @@
 			<string>newWindow</string>
 		</array>
 	</dict>
+	<dict>
+		<key>DefaultValue</key>
+		<true/>
+		<key>Key</key>
+		<string>ddgShortcut</string>
+		<key>Title</key>
+		<string>Enable Ctrl-d shortcut for search</string>
+		<key>Type</key>
+		<string>CheckBox</string>
+	</dict>
 </array>
 </plist>
