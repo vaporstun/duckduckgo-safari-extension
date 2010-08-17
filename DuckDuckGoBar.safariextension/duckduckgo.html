@@ -51,6 +51,8 @@
 function ddgSubmitSearch() {
   var searchTerms = document.getElementById('searchField').value;
   var secure = safari.extension.settings.getItem("ddgSecure");
+  searchTerms = searchTerms.replace(/ /g, "%20"); //Convert spaces to %20
+
   if (secure) {
     searchURL = "https://duckduckgo.com/?q=" + searchTerms;
   }
@@ -87,6 +89,11 @@ function captureMessageEvent(event) {
       document.getElementById('searchField').select();
     }
   }
+}
+
+if (navigator.userAgent.indexOf("Windows") != -1) {
+  alert(navigator.userAgent);
+  document.getElementById('searchField').style.font = "10px Trebuchet MS;";
 }
 </script>
 </body>
