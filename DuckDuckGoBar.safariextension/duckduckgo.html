@@ -67,6 +67,7 @@ function ddgSubmitSearch() {
     case 'bgTab':
       var tab = safari.application.activeBrowserWindow.openTab("background");
       tab.url = searchURL;
+      blur();
       break;
     case 'newWindow':
       safari.application.openBrowserWindow();
