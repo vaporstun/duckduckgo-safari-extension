@@ -72,6 +72,7 @@ function ddgSubmitSearch() {
       safari.application.openBrowserWindow();
     case 'curTab':
       safari.application.activeBrowserWindow.activeTab.url = searchURL;
+      blur();
        break;
   }
 }
