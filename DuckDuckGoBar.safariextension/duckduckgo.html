@@ -13,12 +13,31 @@
 	    float: left;
 	}
 	#submitButton {
-	    float: left;
-	    margin: 2px;
+	    margin: none;
+	    padding: none;
+	    border: none;
 	}
+	#btnSearch {
+	    float: left;
+	    margin: 0px;
+	    margin-top: 2px;
+	    background-color: #8CCE6E;
+	    border: none;
+	    border-radius: 0px 4px 4px 0px;
+	    background-image: url("zoom.v105.png");
+	    background-position: center top;
+	    cursor: pointer;
+	    height: 21px;
+	    width: 21px;
+	}
+	#btnSearch:active {
+	    background-position: center bottom;
+        }
 	#ddgIcon {
 	    display: inline;
+	    vertical-align: middle;
 	    margin: 2px 0px;
+	    border-radius: 4px 0px 0px 4px;
 	}
         #searchBox {
             padding: 0;
@@ -26,14 +45,13 @@
         }
         #searchField {
             width:350px;
-            color:#222;
+            color:#CCC;
             background:#FFF;
             font-family:Trebuchet MS, Arial;
             font-size:16px;
-            padding:auto;
+            padding:none;
 	    border: none;
 	    outline: none;
-            -webkit-border-radius: 0px 15px 15px 0px;
         }
     </style>
 </head>
@@ -42,10 +60,10 @@
   <a href="https://www.duckduckgo.com/"><img src="leftbar.png" id="ddgIcon" /></a>
 </div>
 <div id="search">
-  <input id="searchField" type="text" name="q" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" />
+  <input id="searchField" type="text" name="q" value="DuckDuckGo" onfocus="ddgClearSearch()" onkeydown="if (event.keyCode == 13) document.getElementById('btnSearch').click()" />
 </div>
 <div id="submitButton">
-  <input type="submit" value="Duck Duck Go!" onclick="ddgSubmitSearch()" id="btnSearch" />
+  <input type="submit" value onclick="ddgSubmitSearch()" id="btnSearch" />
 </div>
 <script type="text/javascript">
 function ddgSubmitSearch() {
@@ -80,6 +98,13 @@ function ddgSubmitSearch() {
   }
 }
 
+function ddgClearSearch() {
+  if (document.getElementById('searchField').value == "DuckDuckGo") {
+    document.getElementById('searchField').style.color = "#222";
+    document.getElementById('searchField').value = '';
+  }
+}
+
 safari.application.addEventListener("message", captureMessageEvent, false);
 function captureMessageEvent(event) {
   if (event.name == 'ddgFocus') {
@@ -89,11 +114,6 @@ function captureMessageEvent(event) {
       document.getElementById('searchField').select();
     }
   }
-}
-
-if (navigator.userAgent.indexOf("Windows") != -1) {
-  alert(navigator.userAgent);
-  document.getElementById('searchField').style.font = "10px Trebuchet MS;";
 }
 </script>
 </body>
